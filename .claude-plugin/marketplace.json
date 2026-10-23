@@ -1,0 +1,16 @@
+{
+  "name": "adcopilot-google-analytics-plugin",
+  "description": "AdCopilot for Google Analytics (GA4) in Claude Code: reports, key events, attribution and setup for your GA4 properties, with every change proposed first and applied only on your yes.",
+  "owner": {
+    "name": "Atromx Intelligence",
+    "url": "https://adcopilot.cloud"
+  },
+  "plugins": [
+    {
+      "name": "adcopilot-google-analytics",
+      "source": "./",
+      "description": "Report GA4 traffic and key events, check which events count as conversions, explain attribution and the Google Ads gap, and set up GA4, with every change proposed first.",
+      "category": "Marketing"
+    }
+  ]
+}
