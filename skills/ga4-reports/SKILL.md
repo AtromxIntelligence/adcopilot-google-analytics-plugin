@@ -17,7 +17,7 @@ If Google Analytics is not connected, say what connecting it unlocks, in the ser
 
 Your first answer says this once, in your own plain words, keeping what it says AdCopilot can and cannot do (it holds when you stop at "not connected" too):
 
-> Works today, in full, through the current connector: GA4's 14 reads and 13 non-destructive writes, plus Tag Manager staging and explain_conversion_gap when Google Ads is connected. Not possible through AdCopilot, and said so: deleting or archiving anything, audiences, filters, saved explorations, BigQuery links and data retention settings. Nothing waits for a later connector.
+> Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics audiences, filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
 
 ## Pick the property
 
