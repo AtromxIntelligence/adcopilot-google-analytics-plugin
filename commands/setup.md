@@ -32,18 +32,19 @@ paragraphs below applies.
   second one. Never offer "Add custom connector" or the connector URL to someone
   who has this plugin installed in Claude: the plugin already brings it.
 
-**One connector, one sign-in, whichever AdCopilot plugins are added.** Every
-AdCopilot plugin declares the same connector. In Claude Code, `/mcp` lists it
-once, under whichever AdCopilot plugin loaded first, as
+**One connector and one AdCopilot account, whichever AdCopilot plugins are
+added.** Every AdCopilot plugin declares the same connector. In Claude Code,
+`/mcp` lists it once, under whichever AdCopilot plugin loaded first, and the
+sign-in belongs to that entry. The entry is named
 `plugin:<that plugin's name>:adcopilot`; a plugin that loaded later has its copy
 set aside, and this plugin's skills still work, because they name tools by their
-plain names. If Claude asks for a sign-in again after an
-AdCopilot plugin is removed, run `/mcp` and sign in once.
+plain names. If Claude asks for a sign-in again after an AdCopilot plugin was
+added or removed, run `/mcp` and sign in once.
 
 **A hand-added copy, Claude Code only.** In `claude mcp list`, a bare `adcopilot`
 line and no `plugin:<name>:adcopilot` line means a copy added by hand is the one
-connection in use. It reads the same Analytics and needs no second sign-in, so
-leave it, and never add the connector by hand for someone who has the plugin.
+connection in use. It reads the same Analytics, so leave it, and never add the
+connector by hand for someone who has the plugin.
 
 If the connector answers but reports nothing connected, that is the server
 working, not a fault: the Google products are connected inside AdCopilot, at

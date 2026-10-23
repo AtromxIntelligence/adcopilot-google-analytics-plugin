@@ -292,10 +292,14 @@ class Readme(unittest.TestCase):
                         "## What CI runs"):
             self.assertIn("\n" + heading + "\n", README, heading)
 
-    def test_it_says_one_connector_one_sign_in_and_what_to_do_after_a_removal(self):
-        self.assertIn("one connector, one sign-in", README)
-        self.assertIn("run /mcp and sign in once", README)
-        self.assertIn("under whichever AdCopilot plugin loaded first", README)
+    def test_it_says_one_connector_one_account_and_what_to_do_after_an_add_or_removal(self):
+        text = " ".join(README.split())
+        self.assertIn("There is one connector and one AdCopilot account, whichever "
+                      "AdCopilot plugins you add.", text)
+        self.assertIn("under whichever AdCopilot plugin loaded first, and the sign-in "
+                      "belongs to that entry.", text)
+        self.assertIn("If Claude asks you to sign in again after you add or remove an "
+                      "AdCopilot plugin, run `/mcp` and sign in once.", text)
 
     def test_it_discloses_where_the_data_goes_and_links_the_policies(self):
         for needle in ("runs no code and sends nothing anywhere itself",
