@@ -13,7 +13,7 @@ In short: Works today, in full, through the current AdCopilot connector: reading
 
 Made by Atromx Intelligence (https://adcopilot.cloud). Not affiliated with or endorsed by Google. Google, Google Analytics, Google Ads and Google Tag Manager are trademarks of Google LLC. AdCopilot is not related to other products named AdCopilot.
 
-The plugin is free (MIT). The AdCopilot connector is a hosted service: Free plan available; paid plans on https://adcopilot.cloud/pricing.
+The plugin is MIT licensed. The AdCopilot connector it brings is a hosted service, so you need an AdCopilot account to use it.
 
 ## Install
 
@@ -71,11 +71,24 @@ Four skills, which Claude also picks up from what you ask:
 
 The plugin is instructions only: it runs no code and sends nothing anywhere itself. The AdCopilot connector at mcp.adcopilot.cloud reads and, on your yes, writes your Google products through Google's APIs with your Google sign-in. It is the only destination: https://mcp.adcopilot.cloud/mcp. Read the privacy policy at https://adcopilot.cloud/privacy and the terms at https://adcopilot.cloud/terms. Documentation is at https://adcopilot.cloud/docs/.
 
+## Example prompts
+
+After you sign in, ask in your own words. For example:
+
+- "How did my website traffic and key events do by channel over the last 28 days, against the 28 days before?"
+- "Which events count as conversions in my GA4 property, and is the right one marked?"
+- "Why do Google Ads and Google Analytics report different conversions for last month?"
+- "Set up a GA4 property and a web data stream for my site, and show me what you will change before you change it."
+
 ## Support
 
 Open an issue at https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin/issues, or write to support@adcopilot.cloud.
 
 ## Version
+
+**0.1.1 (2026-11-05)**
+
+Changes nothing you use. The plugin folder now holds only the files Claude loads.
 
 **0.1.0 (2026-10-23, written against AdCopilot v2.44.0, live since 2026-10-22)**
 
@@ -84,7 +97,3 @@ First release. Reports, key events, attribution and setup for GA4 properties thr
 ## Licence
 
 MIT. Copyright (c) 2026 Atromx Intelligence Private Limited. See LICENSE.
-
-## What CI runs
-
-Every push to main and every pull request runs two checks, and neither holds a secret. The first runs `claude plugin validate --strict` on the repository and on the manifest with a pinned Claude Code version, checks that the three JSON files parse and that every skill and command has a name and a description, runs the unit tests, looks for any download piped into a shell, and checks that the manifest version is not behind the latest tag. The unit tests hold the manifest and the connector file to their decided values, check every tool a skill names against the connector's tool list and every file against the directory's size limit, and check that nothing reads a credential, launches a package or downloads and runs. The second check scans every commit for secrets.

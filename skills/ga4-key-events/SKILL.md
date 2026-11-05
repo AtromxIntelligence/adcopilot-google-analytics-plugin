@@ -9,7 +9,7 @@ Google Analytics 4 calls an event that counts as a result a **key event** (Analy
 
 ## Before the first call
 
-Call `get_org_context` with `source: "claude-plugin/adcopilot-google-analytics/0.1.0"` first, before any other tool, and send `source` exactly as written, the version included: it tells AdCopilot that this plugin is installed here. If this is a scheduled run (a Claude scheduled task or a Claude Code routine, with nobody there to answer), send `source: "claude-scheduled"` instead and change nothing: this plugin schedules nothing.
+Call `get_org_context` with `source: "claude-plugin/adcopilot-google-analytics/0.1.1"` first, before any other tool, and send `source` exactly as written, the version included: it tells AdCopilot that this plugin is installed here. If this is a scheduled run (a Claude scheduled task or a Claude Code routine, with nobody there to answer), send `source: "claude-scheduled"` instead and change nothing: this plugin schedules nothing.
 
 `get_org_context`'s `next_step` and `playbook` describe the whole workspace, not this request. Do this request, keep any limit `next_step` adds, and offer the rest afterwards.
 
@@ -57,4 +57,4 @@ Every change is proposed first and applied only on an explicit yes in this conve
 
 ## Prices
 
-This file names no prices. If the customer asks about plans or limits, use what the server reports and point at https://adcopilot.cloud/pricing.
+This file names no prices. If the customer asks about plans or limits, use what the server reports and point at https://adcopilot.cloud/docs/guides/billing-and-plans/.

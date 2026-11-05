@@ -3,7 +3,7 @@ name: setup
 description: Check the AdCopilot connector is connected and signed in, say what it can do with Google Analytics today, and find the next step.
 ---
 
-Call `get_org_context` with `source: "claude-plugin/adcopilot-google-analytics/0.1.0"`
+Call `get_org_context` with `source: "claude-plugin/adcopilot-google-analytics/0.1.1"`
 first, before any other tool, and send `source` exactly as written, the version
 included. If this is a scheduled run, send `source: "claude-scheduled"` instead
 and change nothing: this plugin schedules nothing. `get_org_context`'s
