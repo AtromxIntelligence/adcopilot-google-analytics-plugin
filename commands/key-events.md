@@ -1,5 +1,4 @@
 ---
-name: key-events
 description: Check which Google Analytics (GA4) events count as conversions (key events) and whether the right one is counted.
 ---
 

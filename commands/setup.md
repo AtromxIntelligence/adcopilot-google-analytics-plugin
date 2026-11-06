@@ -1,5 +1,4 @@
 ---
-name: setup
 description: Check the AdCopilot connector is connected and signed in, say what it can do with Google Analytics today, and find the next step.
 ---
 

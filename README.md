@@ -82,13 +82,15 @@ After you sign in, ask in your own words. For example:
 
 ## Support
 
-Open an issue at https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin/issues, or write to support@adcopilot.cloud.
+Open an issue at https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin/issues, or write to support@adcopilot.cloud. Help and contact details are at https://adcopilot.cloud/contact.
+
+To report a security problem, write to support@adcopilot.cloud.
 
 ## Version
 
 **0.1.1 (2026-11-05)**
 
-Changes nothing you use. The plugin folder now holds only the files Claude loads.
+The plugin folder now holds only the files Claude loads. In Claude Code, `setup` now tells a copy of the connector added by hand from the plugin's own by the names of its tools, and points to AdCopilot's steps for removing it. The plugin's support link is now AdCopilot's contact page, and Support says where to report a security problem.
 
 **0.1.0 (2026-10-23, written against AdCopilot v2.44.0, live since 2026-10-22)**
 
