@@ -1,6 +1,6 @@
 # AdCopilot for Google Analytics (GA4)
 
-Google Analytics, GA4, conversions, attribution and reports from your AI client. AdCopilot reads your GA4 properties to report traffic and key events by channel, source and campaign, check that the right events count as conversions, explain your attribution settings and why Google Ads and Analytics disagree, and run funnel, retention and realtime reports. Any change to key events, attribution or data streams is proposed first and made only on your yes; nothing is ever deleted.
+Google Analytics, GA4, conversions, attribution and reports from your AI client. AdCopilot reads your GA4 properties to report traffic and key events by channel, source and campaign, check that the right events count as conversions, explain your attribution settings and why Google Ads and Analytics disagree, and run funnel, retention and realtime reports. Any change to key events, attribution or data streams is proposed first and made only on your yes; nothing in Analytics or Tag Manager is ever deleted.
 
 What it does today, through the AdCopilot connector:
 
@@ -9,11 +9,11 @@ What it does today, through the AdCopilot connector:
 - **Attribution.** The property's attribution model and lookback windows in plain words, why Google Ads and Analytics count different conversions for the same dates, and whether the two are linked (`ga4_get_attribution_settings`, `ga4_update_attribution_settings`, `ga4_list_google_ads_links`, `ga4_create_google_ads_link`, and `explain_conversion_gap`, which needs Google Ads connected).
 - **Setup.** A new Analytics account, a property with the right time zone and currency, a web data stream and its measurement ID, custom dimensions, and the Google tag staged in Tag Manager for you to publish.
 
-In short: Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics audiences, filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
+In short: Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
 
 Made by Atromx Intelligence (https://adcopilot.cloud). Not affiliated with or endorsed by Google. Google, Google Analytics, Google Ads and Google Tag Manager are trademarks of Google LLC. AdCopilot is not related to other products named AdCopilot.
 
-The plugin is free (MIT). The AdCopilot connector is a hosted service: Free plan available; paid plans on https://adcopilot.cloud/pricing.
+The plugin is MIT licensed. The AdCopilot connector it brings is a hosted service, so you need an AdCopilot account to use it.
 
 ## Install
 
@@ -34,7 +34,7 @@ The plugin registers the connector for you, so there is no need for "Add custom 
 /mcp
 ```
 
-The last step opens the connector list. Choose `adcopilot` and sign in. There is no `claude mcp add` step: the plugin registers the connector at `https://mcp.adcopilot.cloud/mcp`.
+The last step opens the connector list. Choose `adcopilot` and sign in. There is nothing to add by hand: the plugin registers the connector at `https://mcp.adcopilot.cloud/mcp`. If you added AdCopilot's connector by hand before, the steps to remove that copy are at https://adcopilot.cloud/docs/connect/claude-code-plugin#already-added-the-connector-by-hand.
 
 ### Then, once
 
@@ -63,19 +63,34 @@ Four skills, which Claude also picks up from what you ask:
 
 - Change anything without your explicit yes in the conversation. Every change is proposed first, with what it changes and how to undo it.
 - Publish Tag Manager. A tag is staged in a workspace called AdCopilot, and publishing is your click in Tag Manager.
-- Delete or archive anything. The connector has no tool that does either in Analytics or Tag Manager, and the skills never ask for one.
+- Delete or archive anything in Analytics or Tag Manager. The connector has no tool that does either there, and the skills never ask for one.
 - Invent a number. Every figure is the one Analytics returned, and where Analytics and Google Ads disagree it says so.
-- Do what the connector has no tool for: audiences, filters, saved explorations, BigQuery links and data retention settings.
+- Do what the connector has no tool for: filters, saved explorations, BigQuery links and data retention settings.
 
 ## Data
 
 The plugin is instructions only: it runs no code and sends nothing anywhere itself. The AdCopilot connector at mcp.adcopilot.cloud reads and, on your yes, writes your Google products through Google's APIs with your Google sign-in. It is the only destination: https://mcp.adcopilot.cloud/mcp. Read the privacy policy at https://adcopilot.cloud/privacy and the terms at https://adcopilot.cloud/terms. Documentation is at https://adcopilot.cloud/docs/.
 
+## Example prompts
+
+After you sign in, ask in your own words. For example:
+
+- "How did my website traffic and key events do by channel over the last 28 days, against the 28 days before?"
+- "Which events count as conversions in my GA4 property, and is the right one marked?"
+- "Why do Google Ads and Google Analytics report different conversions for last month?"
+- "Set up a GA4 property and a web data stream for my site, and show me what you will change before you change it."
+
 ## Support
 
-Open an issue at https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin/issues, or write to support@adcopilot.cloud.
+Open an issue at https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin/issues, or write to support@adcopilot.cloud. Help and contact details are at https://adcopilot.cloud/contact.
+
+To report a security problem, write to support@adcopilot.cloud.
 
 ## Version
+
+**0.1.1 (2026-11-06)**
+
+The plugin folder now holds only the files Claude loads. In Claude Code, `setup` now tells a copy of the connector added by hand from the plugin's own by the names of its tools, and points to AdCopilot's steps for removing it. The plugin's support link is now AdCopilot's contact page, and Support says where to report a security problem. The line about deleting now names what it covers: nothing in Analytics or Tag Manager is ever deleted.
 
 **0.1.0 (2026-10-23, written against AdCopilot v2.44.0, live since 2026-10-22)**
 
@@ -84,7 +99,3 @@ First release. Reports, key events, attribution and setup for GA4 properties thr
 ## Licence
 
 MIT. Copyright (c) 2026 Atromx Intelligence Private Limited. See LICENSE.
-
-## What CI runs
-
-Every push to main and every pull request runs two checks, and neither holds a secret. The first runs `claude plugin validate --strict` on the repository and on the manifest with a pinned Claude Code version, checks that the three JSON files parse and that every skill and command has a name and a description, runs the unit tests, looks for any download piped into a shell, and checks that the manifest version is not behind the latest tag. The unit tests hold the manifest and the connector file to their decided values, check every tool a skill names against the connector's tool list and every file against the directory's size limit, and check that nothing reads a credential, launches a package or downloads and runs. The second check scans every commit for secrets.

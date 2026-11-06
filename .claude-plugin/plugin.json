@@ -1,7 +1,7 @@
 {
   "name": "adcopilot-google-analytics",
-  "version": "0.1.0",
-  "description": "Google Analytics, GA4, conversions, attribution and reports from your AI client. AdCopilot reads your GA4 properties to report traffic and key events by channel, source and campaign, check that the right events count as conversions, explain your attribution settings and why Google Ads and Analytics disagree, and run funnel, retention and realtime reports. Any change to key events, attribution or data streams is proposed first and made only on your yes; nothing is ever deleted. Made by Atromx Intelligence, not by Google.",
+  "version": "0.1.1",
+  "description": "Google Analytics, GA4, conversions, attribution and reports from your AI client. AdCopilot reads your GA4 properties to report traffic and key events by channel, source and campaign, check that the right events count as conversions, explain your attribution settings and why Google Ads and Analytics disagree, and run funnel, retention and realtime reports. Any change to key events, attribution or data streams is proposed first and made only on your yes; nothing in Analytics or Tag Manager is ever deleted. Made by Atromx Intelligence, not by Google.",
   "author": {
     "name": "Atromx Intelligence",
     "url": "https://adcopilot.cloud"
@@ -10,7 +10,7 @@
   "privacyPolicyUrl": "https://adcopilot.cloud/privacy",
   "documentationUrl": "https://adcopilot.cloud/docs/",
   "termsOfServiceUrl": "https://adcopilot.cloud/terms",
-  "supportUrl": "https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin/issues",
+  "supportUrl": "https://adcopilot.cloud/contact",
   "repository": "https://github.com/AtromxIntelligence/adcopilot-google-analytics-plugin",
   "license": "MIT",
   "keywords": [

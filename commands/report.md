@@ -1,5 +1,4 @@
 ---
-name: report
 description: Report Google Analytics (GA4) traffic and key events by channel, source and campaign, this period against the last, or answer the question you give it.
 argument-hint: "[a question or a period, optional]"
 ---
