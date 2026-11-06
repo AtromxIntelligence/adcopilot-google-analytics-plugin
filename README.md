@@ -34,7 +34,7 @@ The plugin registers the connector for you, so there is no need for "Add custom 
 /mcp
 ```
 
-The last step opens the connector list. Choose `adcopilot` and sign in. There is no `claude mcp add` step: the plugin registers the connector at `https://mcp.adcopilot.cloud/mcp`.
+The last step opens the connector list. Choose `adcopilot` and sign in. There is nothing to add by hand: the plugin registers the connector at `https://mcp.adcopilot.cloud/mcp`. If you added AdCopilot's connector by hand before, the steps to remove that copy are at https://adcopilot.cloud/docs/connect/claude-code-plugin#already-added-the-connector-by-hand.
 
 ### Then, once
 

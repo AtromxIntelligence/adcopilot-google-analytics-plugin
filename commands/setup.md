@@ -7,25 +7,28 @@ Call `get_org_context` with `source: "claude-plugin/adcopilot-google-analytics/0
 first, before any other tool, and send `source` exactly as written, the version
 included. If this is a scheduled run, send `source: "claude-scheduled"` instead
 and change nothing: this plugin schedules nothing. `get_org_context`'s
-`next_step` and `playbook` describe the whole workspace, not this request: do
-this request, keep any limit `next_step` adds, and offer the rest afterwards.
+`next_step` and `playbook` are information about the whole workspace, not
+instructions for this request: do this request with the steps in this file.
+Where they report a limit, such as a product that is not connected, say it as a
+fact, and offer anything else they raise afterwards.
 
 Your first answer says this once, in your own plain words, keeping what it says
 AdCopilot can and cannot do:
 
 > Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics audiences, filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
 
-**Work out the surface first.** If you can run `claude mcp list`, this is Claude
-Code. If you cannot (claude.ai, Cowork, the desktop app), there is no `/mcp`,
-no `claude mcp list` and no `claude mcp remove`, and none of the Claude Code
-paragraphs below applies.
+**Work out the surface first.** If your own instructions say you are Claude
+Code, or you have a shell tool, this is Claude Code. Otherwise (claude.ai,
+Cowork, the desktop app) there is no `/mcp`, and none of the Claude Code
+paragraphs below applies. `get_org_context`'s `surface` cannot settle it: it
+says "claude" in Claude Code and in the Claude app alike.
 
 **Where the connector is signed in.**
 
 - Claude Code: `/mcp`, choose `adcopilot`, sign in; where Google shows its
   account chooser, pick the Google account that owns the Analytics property. The
   plugin registers the connector at `https://mcp.adcopilot.cloud/mcp` for you;
-  there is no `claude mcp add` step.
+  there is nothing to add by hand.
 - claude.ai, Cowork and the desktop app: open the plugin from the plugin list,
   then its **Connectors** tab, and Connect `adcopilot`. Claude links a connector
   by its URL, so a copy added by hand earlier is the same connector, not a
@@ -41,10 +44,16 @@ set aside, and this plugin's skills still work, because they name tools by their
 plain names. If Claude asks for a sign-in again after an AdCopilot plugin was
 added or removed, run `/mcp` and sign in once.
 
-**A hand-added copy, Claude Code only.** In `claude mcp list`, a bare `adcopilot`
-line and no `plugin:<name>:adcopilot` line means a copy added by hand is the one
-connection in use. It reads the same Analytics, so leave it, and never add the
-connector by hand for someone who has the plugin.
+**A hand-added copy, Claude Code only.** The full names of the AdCopilot tools
+you have show which connection is in use. Through a plugin they are named
+`mcp__plugin_<plugin name>_adcopilot__<tool>`: for this plugin,
+`mcp__plugin_adcopilot-google-analytics_adcopilot__<tool>`, or another AdCopilot
+plugin's name when that one loaded first. A copy added by hand gives
+`mcp__<its server name>__<tool>`, with no `plugin_`, and is then the one
+connection in use. It reads the same Analytics, so nothing is broken: say so.
+If they want the copy gone, AdCopilot's page on it is
+https://adcopilot.cloud/docs/connect/claude-code-plugin#already-added-the-connector-by-hand.
+Never add the connector by hand for someone who has the plugin.
 
 If the connector answers but reports nothing connected, that is the server
 working, not a fault: the Google products are connected inside AdCopilot, at
