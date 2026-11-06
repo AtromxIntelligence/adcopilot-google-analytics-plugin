@@ -14,13 +14,15 @@ fact, and offer anything else they raise afterwards.
 Your first answer says this once, in your own plain words, keeping what it says
 AdCopilot can and cannot do:
 
-> Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics audiences, filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
+> Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
 
 **Work out the surface first.** If your own instructions say you are Claude
-Code, or you have a shell tool, this is Claude Code. Otherwise (claude.ai,
-Cowork, the desktop app) there is no `/mcp`, and none of the Claude Code
-paragraphs below applies. `get_org_context`'s `surface` cannot settle it: it
-says "claude" in Claude Code and in the Claude app alike.
+Code, this is Claude Code. A shell tool alone does not settle it: the Claude
+app and Cowork can run code too. If you cannot tell, ask which app they are
+using. Otherwise (claude.ai, Cowork, the desktop app) there is no `/mcp`, and
+none of the Claude Code paragraphs below applies. `get_org_context`'s
+`surface` cannot settle it: it says "claude" in Claude Code and in the Claude
+app alike.
 
 **Where the connector is signed in.**
 

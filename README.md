@@ -9,7 +9,7 @@ What it does today, through the AdCopilot connector:
 - **Attribution.** The property's attribution model and lookback windows in plain words, why Google Ads and Analytics count different conversions for the same dates, and whether the two are linked (`ga4_get_attribution_settings`, `ga4_update_attribution_settings`, `ga4_list_google_ads_links`, `ga4_create_google_ads_link`, and `explain_conversion_gap`, which needs Google Ads connected).
 - **Setup.** A new Analytics account, a property with the right time zone and currency, a web data stream and its measurement ID, custom dimensions, and the Google tag staged in Tag Manager for you to publish.
 
-In short: Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics audiences, filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
+In short: Works today, in full, through the current AdCopilot connector: reading Analytics reports and settings and, on your yes, marking key events, changing the attribution model and lookback windows, linking Google Ads, and setting up an account, a property, a web data stream and custom dimensions (a new account's Google terms are yours to accept); staging the Google tag for you to publish when Tag Manager is connected; and explaining why Google Ads and Analytics count different conversions when Google Ads is connected. Not possible through AdCopilot: deleting or archiving anything in Analytics or Tag Manager, publishing in Tag Manager, and Analytics filters, saved explorations, BigQuery links and data retention settings. Nothing here waits for a later connector.
 
 Made by Atromx Intelligence (https://adcopilot.cloud). Not affiliated with or endorsed by Google. Google, Google Analytics, Google Ads and Google Tag Manager are trademarks of Google LLC. AdCopilot is not related to other products named AdCopilot.
 
@@ -65,7 +65,7 @@ Four skills, which Claude also picks up from what you ask:
 - Publish Tag Manager. A tag is staged in a workspace called AdCopilot, and publishing is your click in Tag Manager.
 - Delete or archive anything in Analytics or Tag Manager. The connector has no tool that does either there, and the skills never ask for one.
 - Invent a number. Every figure is the one Analytics returned, and where Analytics and Google Ads disagree it says so.
-- Do what the connector has no tool for: audiences, filters, saved explorations, BigQuery links and data retention settings.
+- Do what the connector has no tool for: filters, saved explorations, BigQuery links and data retention settings.
 
 ## Data
 
@@ -88,9 +88,9 @@ To report a security problem, write to support@adcopilot.cloud.
 
 ## Version
 
-**0.1.1 (2026-11-05)**
+**0.1.1 (2026-11-06)**
 
-The plugin folder now holds only the files Claude loads. In Claude Code, `setup` now tells a copy of the connector added by hand from the plugin's own by the names of its tools, and points to AdCopilot's steps for removing it. The plugin's support link is now AdCopilot's contact page, and Support says where to report a security problem.
+The plugin folder now holds only the files Claude loads. In Claude Code, `setup` now tells a copy of the connector added by hand from the plugin's own by the names of its tools, and points to AdCopilot's steps for removing it. The plugin's support link is now AdCopilot's contact page, and Support says where to report a security problem. The line about deleting now names what it covers: nothing in Analytics or Tag Manager is ever deleted.
 
 **0.1.0 (2026-10-23, written against AdCopilot v2.44.0, live since 2026-10-22)**
 
