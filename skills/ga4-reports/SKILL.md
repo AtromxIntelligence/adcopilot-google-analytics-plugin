@@ -1,6 +1,6 @@
 ---
 name: ga4-reports
-description: Report Google Analytics (GA4) traffic and key events by channel, source and medium, campaign and landing page, this period against the last, plus cross-tabs, ordered funnels, retention by first channel and a realtime check, with every number labelled as Analytics' own. Use when the user asks about GA4, Google Analytics, traffic, sessions, conversions or key events, where visitors come from, which channel or campaign brings results, UTM tracking, funnels, retention, or whether an event is arriving right now.
+description: Report Google Analytics (GA4) traffic and key events by channel, source and medium, campaign and landing page, this period against the last, plus cross-tabs, ordered funnels, retention by first channel and a realtime check, with every number labelled as Analytics' own. Use when the user asks about their Google Analytics (GA4) data through AdCopilot, such as GA4 traffic, sessions or key events, where visitors come from in Analytics, which channel or campaign brings results in GA4, UTM tracking in Analytics, GA4 funnels or retention, or whether an event is arriving in GA4 right now.
 ---
 
 # Analytics reports

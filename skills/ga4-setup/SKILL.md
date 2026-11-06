@@ -1,6 +1,6 @@
 ---
 name: ga4-setup
-description: Set up Google Analytics (GA4) from nothing or finish a half-built setup, covering the Analytics account, the property with the right time zone and currency, a web data stream and its measurement ID, custom dimensions for parameters already being sent, and the Google tag staged in Tag Manager for the customer to publish. Use when the user asks to set up GA4 or Google Analytics, create a property or a data stream, find a measurement ID, add the Google tag, or says Analytics shows no data.
+description: Set up Google Analytics (GA4) from nothing or finish a half-built setup, covering the Analytics account, the property with the right time zone and currency, a web data stream and its measurement ID, custom dimensions for parameters already being sent, and the Google tag staged in Tag Manager for the customer to publish. Use when the user asks to set up GA4 or Google Analytics, create a GA4 property or data stream, find a GA4 measurement ID, add the Google tag for Analytics, or says Google Analytics shows no data.
 ---
 
 # Analytics setup

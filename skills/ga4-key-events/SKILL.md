@@ -1,6 +1,6 @@
 ---
 name: ga4-key-events
-description: Check which Google Analytics (GA4) events count as conversions (key events), flag an every-visit event such as page_view marked as one, pick the action worth counting from the event counts, and propose marking a key event or changing its counting method, proven with a realtime check. Use when the user asks which events are conversions or key events, what GA4 counts as a conversion, why conversions in Analytics look too high or too low, how to set up a conversion in GA4, or whether a conversion event is firing.
+description: Check which Google Analytics (GA4) events count as conversions (key events), flag an every-visit event such as page_view marked as one, pick the action worth counting from the event counts, and propose marking a key event or changing its counting method, proven with a realtime check. Use when the user asks, about their Google Analytics (GA4) property, which events are conversions or key events, what GA4 counts as a conversion, why conversions in Analytics look too high or too low, how to set up a conversion in GA4, or whether a GA4 conversion event is firing.
 ---
 
 # Analytics key events

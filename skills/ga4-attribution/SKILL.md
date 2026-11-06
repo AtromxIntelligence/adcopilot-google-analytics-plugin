@@ -1,6 +1,6 @@
 ---
 name: ga4-attribution
-description: Explain a Google Analytics (GA4) property's attribution settings in plain words, say why Google Ads and Analytics report different conversion counts for the same dates, check whether the property is linked to Google Ads, and propose a model or lookback window change, or the link, each applied only on a yes. Use when the user asks about attribution, the attribution model, lookback windows, data-driven or last click, why Google Ads and Analytics show different conversions, or whether Analytics is linked to Google Ads.
+description: Explain a Google Analytics (GA4) property's attribution settings in plain words, say why Google Ads and Analytics report different conversion counts for the same dates, check whether the property is linked to Google Ads, and propose a model or lookback window change, or the link, each applied only on a yes. Use when the user asks about Google Analytics (GA4) attribution, such as the GA4 attribution model, lookback windows, data-driven or last click in Analytics, why Google Ads and Analytics show different conversions, or whether Analytics is linked to Google Ads.
 ---
 
 # Analytics attribution
