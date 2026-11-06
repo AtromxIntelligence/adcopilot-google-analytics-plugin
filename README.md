@@ -1,6 +1,6 @@
 # AdCopilot for Google Analytics (GA4)
 
-Google Analytics, GA4, conversions, attribution and reports from your AI client. AdCopilot reads your GA4 properties to report traffic and key events by channel, source and campaign, check that the right events count as conversions, explain your attribution settings and why Google Ads and Analytics disagree, and run funnel, retention and realtime reports. Any change to key events, attribution or data streams is proposed first and made only on your yes; nothing is ever deleted.
+Google Analytics, GA4, conversions, attribution and reports from your AI client. AdCopilot reads your GA4 properties to report traffic and key events by channel, source and campaign, check that the right events count as conversions, explain your attribution settings and why Google Ads and Analytics disagree, and run funnel, retention and realtime reports. Any change to key events, attribution or data streams is proposed first and made only on your yes; nothing in Analytics or Tag Manager is ever deleted.
 
 What it does today, through the AdCopilot connector:
 
@@ -63,7 +63,7 @@ Four skills, which Claude also picks up from what you ask:
 
 - Change anything without your explicit yes in the conversation. Every change is proposed first, with what it changes and how to undo it.
 - Publish Tag Manager. A tag is staged in a workspace called AdCopilot, and publishing is your click in Tag Manager.
-- Delete or archive anything. The connector has no tool that does either in Analytics or Tag Manager, and the skills never ask for one.
+- Delete or archive anything in Analytics or Tag Manager. The connector has no tool that does either there, and the skills never ask for one.
 - Invent a number. Every figure is the one Analytics returned, and where Analytics and Google Ads disagree it says so.
 - Do what the connector has no tool for: audiences, filters, saved explorations, BigQuery links and data retention settings.
 
